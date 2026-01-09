@@ -1,0 +1,2017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Titronics | Professional Chiropractic Equipment & Cloud Software</title>
+  <meta name="description" content="Titronics builds professional chiropractic instruments and cloud software. Shop thermography, sEMG, posture analysis, and subscribe to secure cloud tools." />
+  <meta name="theme-color" content="#0ea5e9" />
+  <meta property="og:title" content="Titronics | Professional Chiropractic Equipment & Cloud Software" />
+  <meta property="og:description" content="Clinical-grade chiropractic equipment with modern cloud software. Fast, secure, and built for results." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1581594693700-8a53f17d4a96?auto=format&fit=crop&w=1200&q=80" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b1220;
+      --surface:#0f172a;
+      --card:#0b1220;
+      --muted:#6b7280;
+      --text:#0b1220;
+      --text-inv:#0b1220;
+      --primary:#0ea5e9;
+      --primary-600:#0284c7;
+      --primary-700:#0369a1;
+      --accent:#6366f1;
+      --success:#10b981;
+      --warning:#f59e0b;
+      --danger:#ef4444;
+      --ring:0 0 0 3px rgba(14,165,233,.35);
+      --shadow-lg:0 20px 40px -20px rgba(2,6,23,.35);
+      --shadow-md:0 12px 24px -12px rgba(2,6,23,.25);
+      --shadow-sm:0 6px 12px -8px rgba(2,6,23,.2);
+      --radius:14px;
+      --radius-sm:10px;
+      --radius-xs:8px;
+      --maxw:1200px;
+      --blend:linear-gradient(120deg, #0ea5e9, #22d3ee 40%, #6366f1 90%);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#0b1220;background:#fbfcff;letter-spacing:.01em}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    button{font-family:inherit}
+    .container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;border:none;border-radius:999px;padding:.9rem 1.2rem;font-weight:600;cursor:pointer;transition:.2s ease;box-shadow:var(--shadow-sm);position:relative}
+    .btn span.icon{display:inline-flex}
+    .btn-primary{background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff}
+    .btn-primary:hover{filter:brightness(.95);transform:translateY(-1px)}
+    .btn-outline{background:#fff;border:1px solid rgba(2,6,23,.08);color:#0b1220}
+    .btn-outline:hover{border-color:rgba(2,6,23,.18);box-shadow:var(--shadow-sm)}
+    .btn-ghost{background:transparent;border:1px solid rgba(2,6,23,.12);color:#0b1220}
+    .badge{display:inline-flex;align-items:center;gap:.35rem;font-size:.75rem;padding:.35rem .6rem;border-radius:999px;background:rgba(14,165,233,.12);color:#0369a1;border:1px solid rgba(14,165,233,.22)}
+    .pill{border-radius:999px;padding:.5rem .9rem;border:1px solid rgba(2,6,23,.08);background:#fff}
+    header.site{position:sticky;top:0;background:rgba(255,255,255,.8);backdrop-filter:saturate(140%) blur(14px);z-index:50;border-bottom:1px solid rgba(2,6,23,.06)}
+    .topbar{background:linear-gradient(90deg,#0ea5e9,#22d3ee,#6366f1);color:#fff}
+    .topbar .container{display:flex;align-items:center;justify-content:space-between;padding:.45rem 20px;font-size:.9rem}
+    .promo-rotate{display:inline-flex;gap:1rem;white-space:nowrap;animation:marquee 24s linear infinite}
+    .promo-viewport{overflow:hidden;max-width:60vw}
+    @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:.8rem 0}
+    .brand{display:flex;align-items:center;gap:.8rem}
+    .logo{width:38px;height:38px;border-radius:10px;background:var(--blend);box-shadow:inset 0 0 0 1px rgba(255,255,255,.35),0 10px 20px -10px rgba(14,165,233,.5)}
+    .brand span{font-weight:800;letter-spacing:.02em;font-family:Manrope,'Inter',sans-serif}
+    nav.primary{display:flex;gap:1rem;align-items:center}
+    nav.primary a{padding:.6rem .8rem;border-radius:10px;color:#0f172a;font-weight:600}
+    nav.primary a.active, nav.primary a:hover{background:rgba(2,6,23,.06)}
+    .searchbar{position:relative;flex:1;max-width:460px}
+    .searchbar input{width:100%;border:1px solid rgba(2,6,23,.12);border-radius:999px;padding:.75rem 1rem .75rem 2.4rem;background:#fff;box-shadow:var(--shadow-sm);outline:none}
+    .searchbar input:focus{border-color:rgba(14,165,233,.45);box-shadow:var(--ring)}
+    .searchbar svg{position:absolute;left:.8rem;top:50%;transform:translateY(-50%);opacity:.7}
+    .search-suggest{position:absolute;top:110%;left:0;right:0;background:#fff;border:1px solid rgba(2,6,23,.12);border-radius:14px;box-shadow:var(--shadow-lg);padding:.4rem;display:none;z-index:40}
+    .search-suggest.visible{display:block}
+    .search-suggest a{display:flex;gap:.8rem;align-items:center;padding:.6rem;border-radius:10px}
+    .search-suggest a:hover{background:rgba(2,6,23,.05)}
+    .icons{display:flex;gap:.5rem;align-items:center}
+    .cart-indicator{position:relative}
+    .cart-count{position:absolute;top:-6px;right:-6px;background:var(--accent);color:#fff;width:20px;height:20px;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;box-shadow:var(--shadow-sm)}
+    .hamburger{display:none}
+    .hero{position:relative;background:
+      radial-gradient(1200px 600px at 100% -10%, rgba(99,102,241,.16), transparent 60%),
+      radial-gradient(1200px 600px at -10% 10%, rgba(14,165,233,.16), transparent 60%),
+      linear-gradient(180deg,#f7fbff,#ffffff)}
+    .hero .container{display:grid;grid-template-columns:1.05fr .95fr;gap:2rem;align-items:center;padding:3rem 20px}
+    .eyebrow{display:inline-flex;gap:.5rem;align-items:center;background:rgba(14,165,233,.1);color:#0369a1;border:1px solid rgba(14,165,233,.25);padding:.35rem .7rem;border-radius:999px;font-weight:700}
+    h1{font-size:clamp(2rem,3.4vw,3rem);line-height:1.1;margin:.8rem 0 .6rem}
+    p.lead{font-size:clamp(1rem,1.35vw,1.15rem);color:#374151;margin:0 0 1.2rem}
+    .hero-card{border:1px solid rgba(2,6,23,.06);background:#fff;border-radius:var(--radius);padding:1.2rem;box-shadow:var(--shadow-md)}
+    .trust{display:flex;gap:1.2rem;align-items:center;flex-wrap:wrap;margin-top:1rem}
+    .trust img{height:26px;opacity:.7;filter:grayscale(100%)}
+    .section{padding:3.2rem 0}
+    .section h2{font-size:clamp(1.4rem,2.6vw,2rem);margin:0 0 1rem}
+    .grid{display:grid;gap:1.2rem}
+    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .card{background:#fff;border:1px solid rgba(2,6,23,.06);border-radius:var(--radius);box-shadow:var(--shadow-sm);overflow:hidden;display:flex;flex-direction:column}
+    .card .media{position:relative;aspect-ratio:16/10;overflow:hidden}
+    .card .media img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+    .card:hover .media img{transform:scale(1.04)}
+    .card .content{padding:1rem}
+    .price{display:flex;gap:.5rem;align-items:center;font-weight:800}
+    .price .old{color:#6b7280;text-decoration:line-through;font-weight:600}
+    .price .sale{color:#0ea5e9}
+    .rating{display:flex;gap:.15rem}
+    .rating svg{color:#f59e0b}
+    .filters{display:flex;gap:.8rem;flex-wrap:wrap;align-items:center;margin:.8rem 0 1rem}
+    .filters .filter{border:1px solid rgba(2,6,23,.1);padding:.5rem .8rem;border-radius:999px;background:#fff}
+    .chip{display:inline-flex;align-items:center;gap:.4rem;border:1px solid rgba(2,6,23,.08);background:#fff;padding:.35rem .6rem;border-radius:999px;font-size:.85rem}
+    .product-page{display:grid;grid-template-columns:1.05fr .95fr;gap:2rem}
+    .gallery{background:#fff;border:1px solid rgba(2,6,23,.06);border-radius:var(--radius);box-shadow:var(--shadow-sm);padding:.8rem}
+    .gallery-main{aspect-ratio:16/11;border-radius:12px;overflow:hidden;position:relative;background:#f1f5f9}
+    .gallery-main img{width:100%;height:100%;object-fit:cover}
+    .thumbs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.5rem;margin-top:.6rem}
+    .thumbs button{border:1px solid rgba(2,6,23,.08);border-radius:10px;overflow:hidden;aspect-ratio:16/11;background:#fff;cursor:pointer}
+    .sticky{position:sticky;top:92px;align-self:start}
+    .specs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem;background:#f8fafc;border:1px solid rgba(2,6,23,.06);border-radius:12px;padding:.8rem;margin-top:.8rem}
+    .spec{background:#fff;border-radius:10px;border:1px solid rgba(2,6,23,.06);padding:.6rem}
+    .table{width:100%;border-collapse:separate;border-spacing:0 8px}
+    .table tr{background:#fff;border:1px solid rgba(2,6,23,.06)}
+    .table td,.table th{padding:.6rem .8rem}
+    .divider{height:1px;background:rgba(2,6,23,.08);margin:1rem 0}
+    .mini{font-size:.9rem;color:#6b7280}
+    .rec{margin-top:1.6rem}
+    .breadcrumbs{display:flex;gap:.4rem;align-items:center;font-size:.9rem;color:#6b7280;margin:.4rem 0 .6rem}
+    .breadcrumbs a{color:#0f172a}
+    .cart-fab{position:fixed;right:16px;bottom:16px;z-index:40;background:#fff;border:1px solid rgba(2,6,23,.08);box-shadow:var(--shadow-lg);border-radius:999px;padding:.6rem .9rem;display:none}
+    .panel{background:#fff;border:1px solid rgba(2,6,23,.08);border-radius:var(--radius);box-shadow:var(--shadow-sm);padding:1rem}
+    .checkout-steps{display:flex;gap:.6rem;margin:1rem 0}
+    .step{flex:1;border:1px dashed rgba(2,6,23,.12);border-radius:12px;padding:.7rem .9rem;display:flex;align-items:center;gap:.6rem}
+    .step.active{border-style:solid;border-color:rgba(14,165,233,.45);box-shadow:var(--ring)}
+    .form{display:grid;gap:.8rem}
+    .field{display:grid;gap:.3rem}
+    .field label{font-weight:600}
+    .field input,.field select,.field textarea{border:1px solid rgba(2,6,23,.12);border-radius:10px;padding:.7rem .8rem;outline:none}
+    .field input:focus,.field select:focus,.field textarea:focus{border-color:rgba(14,165,233,.45);box-shadow:var(--ring)}
+    .summary{position:sticky;top:92px}
+    .summary .line{display:flex;justify-content:space-between;margin:.2rem 0}
+    .summary .total{font-weight:800;border-top:1px dashed rgba(2,6,23,.15);margin-top:.5rem;padding-top:.5rem;font-size:1.1rem}
+    .order{max-width:860px;margin:0 auto}
+    footer{background:#0b1220;color:#e5e7eb;margin-top:3rem}
+    footer .grid{grid-template-columns:2fr repeat(4,1fr)}
+    footer a{color:#cbd5e1}
+    .social{display:flex;gap:.6rem;margin-top:.6rem}
+    .support-btn{position:fixed;bottom:16px;left:16px;border-radius:999px;background:linear-gradient(135deg,#22d3ee,#6366f1);color:#fff;padding:.7rem 1rem;box-shadow:var(--shadow-lg);z-index:50}
+    .chat{position:fixed;bottom:86px;right:16px;width:360px;max-width:92vw;background:#fff;border:1px solid rgba(2,6,23,.12);border-radius:16px;box-shadow:var(--shadow-lg);display:none;flex-direction:column;overflow:hidden;z-index:60}
+    .chat header{padding:.7rem .9rem;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(135deg,#0ea5e9,#6366f1);color:#fff}
+    .chat .body{padding:.7rem;height:320px;overflow:auto;background:#f8fafc}
+    .msg{display:flex;gap:.6rem;margin:.35rem 0}
+    .msg .bubble{padding:.5rem .7rem;border-radius:12px;max-width:80%}
+    .msg.user{justify-content:flex-end}
+    .msg.user .bubble{background:#0ea5e9;color:#fff;border-bottom-right-radius:4px}
+    .msg.bot .bubble{background:#fff;border:1px solid rgba(2,6,23,.08);border-bottom-left-radius:4px}
+    .chat .input{display:flex;gap:.4rem;padding:.6rem;border-top:1px solid rgba(2,6,23,.08);background:#fff}
+    .chat .input input{flex:1;border:1px solid rgba(2,6,23,.12);border-radius:999px;padding:.6rem .8rem}
+    .hidden{display:none !important}
+    .reveal{opacity:0;transform:translateY(12px);transition:.6s ease}
+    .reveal.in-view{opacity:1;transform:none}
+    .toast{position:fixed;top:14px;right:14px;background:#111827;color:#fff;padding:.6rem .9rem;border-radius:12px;box-shadow:var(--shadow-lg);z-index:80;display:none}
+    .modal{position:fixed;inset:0;background:rgba(2,6,23,.5);display:none;align-items:center;justify-content:center;z-index:70}
+    .modal .box{background:#fff;border-radius:16px;padding:1rem;max-width:720px;width:92vw;box-shadow:var(--shadow-lg)}
+    .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;background:#f1f5f9;border:1px solid #e2e8f0;border-bottom-width:3px;border-radius:6px;padding:.1rem .35rem}
+    .admin-sidebar{position:sticky;top:92px}
+    .admin-grid{display:grid;grid-template-columns:260px 1fr;gap:1rem}
+    .code{font-family:ui-monospace,Menlo,Consolas,monospace;background:#0f172a;color:#cbd5e1;padding:.8rem;border-radius:10px;overflow:auto}
+    .pill-green{background:rgba(16,185,129,.12);border-color:rgba(16,185,129,.25);color:#065f46}
+    .pill-red{background:rgba(239,68,68,.12);border-color:rgba(239,68,68,.25);color:#7f1d1d}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    /* responsive */
+    @media (max-width:1024px){
+      .hero .container,.product-page{grid-template-columns:1fr}
+      .summary{position:static}
+      .sticky{position:static}
+      .grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}
+      footer .grid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:760px){
+      nav.primary{display:none}
+      .hamburger{display:inline-flex}
+      .searchbar{display:none}
+      .grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .grid-3{grid-template-columns:repeat(1,minmax(0,1fr))}
+      footer .grid{grid-template-columns:1fr}
+      .hero .container{padding:1.8rem 20px}
+      .cart-fab{display:flex}
+      .topbar .container{padding:.35rem 20px}
+    }
+  </style>
+  <script type="application/ld+json" id="org-json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Titronics",
+    "url":"https://www.titronics.com",
+    "logo":"https://www.titronics.com/favicon.ico",
+    "sameAs":["https://www.linkedin.com/company/titronics"],
+    "contactPoint": [{
+      "@type":"ContactPoint",
+      "telephone":"+1-800-555-0199",
+      "contactType":"customer support",
+      "areaServed":"US"
+    }]
+  }
+  </script>
+  <script type="application/ld+json" id="site-json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "url":"https://www.titronics.com",
+    "name":"Titronics",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://www.titronics.com/#/products?q={search_term_string}",
+      "query-input":"required name=search_term_string"
+    }
+  }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+  <a class="sr-only" href="#view">Skip to content</a>
+  <header class="site">
+    <div class="topbar">
+      <div class="container">
+        <div>
+          <strong>Questions?</strong> Call +1 (800) 555-0199 • M–F 9–6 ET
+        </div>
+        <div class="promo-viewport" aria-hidden="true">
+          <div class="promo-rotate">
+            <div>Free shipping on orders $1,500+</div>
+            <div>Cloud migration concierge available</div>
+            <div>Secure checkout • Credit Cards & PayPal</div>
+            <div>Welcome code: WELCOME10</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container nav">
+      <a href="#"><img src="https://titronics.com/wp-content/uploads/2022/05/Titronics-Logo-Black-01.png" style="width:160px; height:65px;"></a>
+      <!-- <a href="#/" class="brand" aria-label="Titronics Home">
+        <div class="logo" aria-hidden="true"></div>
+        <span>Titronics</span>
+      </a> -->
+      <nav class="primary" aria-label="Main"> <span></span>
+        <a href="#/products" data-nav="products">Products</a>
+        <a href="#/software" data-nav="software">Cloud Software</a>
+        <a href="#/migration" data-nav="migration">Migration</a>
+        <a href="#/support" data-nav="support">Support</a>
+        <a href="#/about" data-nav="about">About</a>
+      </nav>
+      <div class="searchbar" role="search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="m21 21-4.3-4.3M17 10.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Z" stroke="#111827" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <input id="search-input" aria-label="Search products" placeholder="Search equipment, software, accessories..." autocomplete="off" />
+        <div id="search-suggest" class="search-suggest"></div>
+      </div>
+      <div class="icons">
+        <button class="btn btn-outline" onclick="location.hash='#/products'"><span class="icon">🛒</span><span class="sr-only">Shop</span></button>
+        <div class="cart-indicator">
+          <button class="btn btn-outline" aria-label="Open cart" onclick="location.hash='#/cart'">
+            <span class="icon">🧺</span>
+          </button>
+          <div class="cart-count" id="cart-count">0</div>
+        </div>
+        <button class="btn btn-outline hamburger" aria-label="Open Menu" onclick="toggleMobileMenu()">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="view">
+    <!-- Content injected by router -->
+  </main>
+
+  <a class="cart-fab" href="#/cart">View Cart • <span id="fab-count">0</span></a>
+  <button class="support-btn" onclick="toggleChat(true)">Chat with Support</button>
+  <div class="chat" id="chat">
+    <header>
+      <strong>Support</strong>
+      <button class="btn btn-ghost" onclick="toggleChat(false)">✕</button>
+    </header>
+    <div class="body" id="chat-body" aria-live="polite"></div>
+    <div class="input">
+      <input id="chat-input" placeholder="Type your message..." onkeydown="if(event.key==='Enter'){sendChat()}" />
+      <button class="btn btn-primary" onclick="sendChat()">Send</button>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <div class="modal" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+    <div class="box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.6rem">
+        <strong>Image preview</strong>
+        <button class="btn btn-ghost" onclick="closeLightbox()">Close</button>
+      </div>
+      <img id="lightbox-img" alt="Preview" />
+    </div>
+  </div>
+
+  <div class="modal" id="paypal-modal" role="dialog" aria-modal="true" aria-label="PayPal Checkout">
+    <div class="box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.6rem">
+        <strong>PayPal Checkout</strong>
+        <button class="btn btn-ghost" onclick="togglePayPal(false)">Close</button>
+      </div>
+      <p>For demo purposes, this simulates redirecting to PayPal and returning a successful payment.</p>
+      <div style="display:flex;gap:.6rem;margin-top:.8rem">
+        <button class="btn btn-outline" onclick="togglePayPal(false)">Cancel</button>
+        <button class="btn btn-primary" onclick="simulatePayPalSuccess()">Complete Payment</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container section">
+      <div class="grid">
+        <div>
+          <div class="brand" style="color:#fff;margin-bottom:.6rem">
+            <div ><a href="#"><img src="https://titronics.com/wp-content/uploads/2022/05/Titronics-Logo-Black-01.png" style="width:160px; height:65px;"></a></div>
+            <span>Titronics</span>
+          </div>
+          <p style="color:#cbd5e1;max-width:520px">Professional chiropractic instrumentation and cloud software designed for clarity, credibility, and outcomes.</p>
+          <div class="social">
+            <a href="https://www.linkedin.com" aria-label="LinkedIn">🔗</a>
+            <a href="mailto:support@titronics.com" aria-label="Email">✉️</a>
+            <a href="tel:+18005550199" aria-label="Phone">📞</a>
+          </div>
+        </div>
+        <div>
+          <strong>Products</strong>
+          <div style="display:grid;gap:.4rem;margin-top:.6rem">
+            <a href="#/products?cat=Thermography">Thermography</a>
+            <a href="#/products?cat=sEMG">sEMG</a>
+            <a href="#/products?cat=Posture">Posture</a>
+            <a href="#/products?cat=Accessories">Accessories</a>
+            <a href="#/products?cat=Bundles">Bundles</a>
+          </div>
+        </div>
+        <div>
+          <strong>Software</strong>
+          <div style="display:grid;gap:.4rem;margin-top:.6rem">
+            <a href="#/software">Titronics Cloud</a>
+            <a href="#/software#pricing">Pricing</a>
+            <a href="#/migration">Migrate to Cloud</a>
+            <a href="#/support">Help Center</a>
+          </div>
+        </div>
+        <div>
+          <strong>Company</strong>
+          <div style="display:grid;gap:.4rem;margin-top:.6rem">
+            <a href="#/about">About</a>
+            <a href="#/support#contact">Contact</a>
+            <a href="#/careers">Careers</a>
+            <a href="#/admin">Admin</a>
+          </div>
+        </div>
+        <div>
+          <strong>Legal</strong>
+          <div style="display:grid;gap:.4rem;margin-top:.6rem">
+            <a href="#/privacy">Privacy</a>
+            <a href="#/terms">Terms</a>
+            <a href="#/returns">Returns</a>
+            <a href="#/warranty">Warranty</a>
+          </div>
+        </div>
+      </div>
+      <div class="divider" style="background:rgba(255,255,255,.12);margin:1rem 0"></div>
+      <div style="display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;color:#9ca3af">
+        <div>© <span id="year"></span> Titronics. All rights reserved By Zannatul.</div>
+        <div>1030 HealthTech Way, Tampa, FL 33602 • +1 (800) 555-0199</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const StoreKey = 'titronics_v1';
+    const ChatKey = 'titronics_chat';
+    const OrdersKey = 'titronics_orders';
+    const CartKey = 'titronics_cart';
+    const IsDemo = true;
+
+    const DefaultData = {
+      promotions: {
+        bannerText: "Limited-time: WELCOME10 for 10% off eligible items.",
+        coupons: [
+          { code:"WELCOME10", type:"percent", value:10, active:true, expiresAt:null }
+        ]
+      },
+      settings: {
+        taxByState: { "CA":0.0725,"FL":0.06,"TX":0.0625,"NY":0.04,"WA":0.065 },
+        defaultTax: 0.05,
+        shippingRules: { freeThreshold:1500, ground:25, expedited:75 }
+      },
+      products: [
+        {
+          id:"p-tytron-nova",
+          sku:"TTN-5000",
+          name:"TyTron Nova Thermography System",
+          slug:"tytron-nova-thermography-system",
+          category:"Thermography",
+          type:"hardware",
+          price:9995,
+          salePrice:9495,
+          rating:4.9,
+          reviewsCount:124,
+          badge:"Best Seller",
+          short:"Clinical-grade paraspinal thermography with cloud reporting.",
+          description:"Engineered for chiropractic excellence. TyTron Nova delivers consistent, repeatable paraspinal thermal scans with guided workflows and instant cloud reporting to support clear patient communication.",
+          specs:[
+            {label:"Scan Width", value:"2x multi-sensor array"},
+            {label:"Sampling Rate", value:"2 kHz per channel"},
+            {label:"Connectivity", value:"USB-C / Wi‑Fi"},
+            {label:"Battery", value:"10 hrs continuous"},
+            {label:"Cloud", value:"Titronics Cloud Sync"},
+            {label:"Warranty", value:"24 months"}
+          ],
+          images:[
+            "https://i.postimg.cc/WpJWgWXS/Titronics-Researchh-Development1-1.png?auto=format&fit=crop&w=1200&q=80",
+            "https://i.postimg.cc/WpJWgWXS/Titronics-Researchh-Development1-1.png?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+          ],
+          resources:[
+            {label:"Product Brochure (PDF)", url:"#"},
+            {label:"HIPAA Compliance Statement", url:"#"}
+          ]
+        },
+        {
+          id:"p-semg-pro",
+          sku:"SEM-4200",
+          name:"sEMG Pro Surface EMG Scanner",
+          slug:"semg-pro-surface-emg-scanner",
+          category:"sEMG",
+          type:"hardware",
+          price:7495,
+          salePrice:null,
+          rating:4.7,
+          reviewsCount:88,
+          badge:"Clinically Proven",
+          short:"High-resolution bilateral sEMG with artifact suppression and cloud analytics.",
+          description:"Capture high fidelity sEMG signals with advanced artifact suppression and standardized protocols. Seamless cloud upload enables multi-visit comparisons and patient-friendly visuals.",
+          specs:[
+            {label:"Channels", value:"Dual bilateral"},
+            {label:"Bandwidth", value:"20–500 Hz"},
+            {label:"Noise Floor", value:"< 1 µV RMS"},
+            {label:"Cloud", value:"Auto-sync"},
+            {label:"Weight", value:"0.9 lb"},
+            {label:"Warranty", value:"24 months"}
+          ],
+          images:[
+            "https://i.postimg.cc/J4zQKpQd/s-EMG-Pro-Surface-EMG-Scanner.png?auto=format&fit=crop&w=1200&q=80",
+            /*"https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",*/
+            "https://images.unsplash.com/photo-1550831106-9380442a2f04?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1632140580182-0affb616086c?auto=format&fit=crop&w=1200&q=80"
+          ],
+          resources:[{label:"Quick Start", url:"#"}]
+        },
+        {
+          id:"p-posture-vision",
+          sku:"POS-310",
+          name:"Posture Vision Camera Kit",
+          slug:"posture-vision-camera-kit",
+          category:"Posture",
+          type:"hardware",
+          price:1299,
+          salePrice:1199,
+          rating:4.6,
+          reviewsCount:63,
+          badge:"New",
+          short:"Evidence-based posture analysis with guided capture and reporting.",
+          description:"Standardize posture capture with calibrated markers and distortion correction. Generate clear, professional reports in minutes—no specialist training required.",
+          specs:[
+            {label:"Resolution", value:"24MP"},
+            {label:"Capture Guide", value:"AR-assisted"},
+            {label:"Tripod", value:"Carbon, 1.8m"},
+            {label:"Lighting", value:"Twin LED panels"}
+          ],
+          images:[
+            "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1554136360-1b09b51a8f8f?auto=format&fit=crop&w=1200&q=80"
+          ],
+          resources:[{label:"Calibration Chart (PDF)", url:"#"}]
+        },
+        {
+          id:"p-cloud",
+          sku:"CLOUD-001",
+          name:"Titronics Cloud",
+          slug:"titronics-cloud",
+          category:"Software",
+          type:"subscription",
+          priceMonthly:79,
+          priceAnnual:799,
+          price:79,
+          salePrice:null,
+          rating:4.9,
+          reviewsCount:210,
+          badge:"HIPAA-Ready",
+          short:"Secure cloud storage, analytics, and reporting for all Titronics devices.",
+          description:"Upgrade to a modern, secure platform. Centralize device data, compare visits, and generate professional visuals. Built-in role-based access and automatic backups.",
+          specs:[
+            {label:"Compliance", value:"HIPAA-ready"},
+            {label:"Storage", value:"Unlimited"},
+            {label:"Users", value:"Unlimited staff"},
+            {label:"Backups", value:"Automatic"},
+            {label:"Support", value:"Priority chat & email"}
+          ],
+          images:[
+            "https://i.postimg.cc/ydJDkSXK/Titronics-Cloud372.png?auto=format&fit=crop&w=1200&q=80",
+            "https://i.postimg.cc/ydJDkSXK/Titronics-Cloud372.png?auto=format&fit=crop&w=1200&q=80"
+          ],
+          resources:[
+            {label:"Security Whitepaper", url:"#"},
+            {label:"API Docs", url:"#"}
+          ]
+        },
+        {
+          id:"p-cloud-upgrade",
+          sku:"CLOUD-UPG",
+          name:"Cloud Upgrade (Existing Clients)",
+          slug:"cloud-upgrade-existing",
+          category:"Software",
+          type:"subscription",
+          priceMonthly:49,
+          priceAnnual:499,
+          price:49,
+          salePrice:null,
+          rating:4.8,
+          reviewsCount:156,
+          badge:"Popular",
+          short:"Special pricing for existing local software customers.",
+          description:"Move from legacy local software to Titronics Cloud with preferred pricing and guided onboarding. Keep your historical data while gaining modern cloud benefits.",
+          specs:[
+            {label:"Migration", value:"Guided"},
+            {label:"Data Import", value:"Included"},
+            {label:"Training", value:"2 sessions"}
+          ],
+          images:[
+            "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=1200&q=80"
+          ],
+          resources:[{label:"Upgrade Guide", url:"#"}]
+        },
+        {
+          id:"p-migration-service",
+          sku:"SRV-MIG",
+          name:"Cloud Migration Service",
+          slug:"cloud-migration-service",
+          category:"Services",
+          type:"service",
+          price:399,
+          salePrice:null,
+          rating:4.9,
+          reviewsCount:92,
+          badge:"Concierge",
+          short:"End-to-end database migration by our specialists.",
+          description:"Our team securely migrates your historical data to Titronics Cloud. Includes preflight checks, secure transfer, validation, and go-live support.",
+          specs:[
+            {label:"Turnaround", value:"2–5 business days"},
+            {label:"Encryption", value:"At-rest & in-transit"},
+            {label:"Validation", value:"Dual pass"}
+          ],
+          images:[
+            "https://images.unsplash.com/photo-1522071901873-411886a10004?auto=format&fit=crop&w=1200&q=80"
+          ],
+          resources:[{label:"Migration Checklist", url:"#"}]
+        },
+        {
+          id:"p-thermal-printer",
+          sku:"ACC-TP200",
+          name:"Thermal Printer Accessory",
+          slug:"thermal-printer-accessory",
+          category:"Accessories",
+          type:"accessory",
+          price:349,
+          salePrice:299,
+          rating:4.5,
+          reviewsCount:34,
+          badge:null,
+          short:"Fast, quiet printing for front-desk reports.",
+          description:"Compact thermal printer for instant patient handouts and summaries with durable, smudge-free output.",
+          specs:[
+            {label:"Width", value:"80mm"},
+            {label:"Connectivity", value:"USB / BT"},
+            {label:"Speed", value:"250mm/s"}
+          ],
+          images:[
+            "https://i.postimg.cc/fbSsd7Fm/Thermal-Printer-Accessory.png?auto=format&fit=crop&w=1200&q=80"
+          ]
+        },
+        {
+          id:"p-starter-bundle",
+          sku:"BND-START",
+          name:"Chiro Starter Bundle",
+          slug:"chiro-starter-bundle",
+          category:"Bundles",
+          type:"bundle",
+          price:15999,
+          salePrice:14999,
+          rating:5.0,
+          reviewsCount:41,
+          badge:"Save $1,000",
+          short:"Thermography + sEMG + Posture + 1yr Cloud + Training.",
+          description:"Everything you need to launch or upgrade your objective findings program with confidence. Best value for new clinics.",
+          specs:[
+            {label:"Includes", value:"TyTron Nova, sEMG Pro, Posture Vision, 1yr Cloud"},
+            {label:"Training", value:"4 sessions"},
+            {label:"Support", value:"Priority"}
+          ],
+          images:[
+            "https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1581594693700-8a53f17d4a96?auto=format&fit=crop&w=1200&q=80"
+          ]
+        }
+      ]
+    };
+
+    const App = {
+      data: JSON.parse(JSON.stringify(DefaultData)),
+      cart: [],
+      orders: [],
+      fuse: null,
+      currentRoute: '/',
+      mobileMenuOpen: false,
+      init(){
+        this.load();
+        this.initSearch();
+        window.addEventListener('hashchange', ()=>this.route());
+        this.route();
+        this.updateCartCount();
+        document.getElementById('year').textContent = new Date().getFullYear();
+        this.observeReveal();
+        this.seedChat();
+      },
+      load(){
+        try {
+          const saved = JSON.parse(localStorage.getItem(StoreKey)||'null');
+          if(saved){ this.data = saved; }
+          this.cart = JSON.parse(localStorage.getItem(CartKey)||'[]');
+          this.orders = JSON.parse(localStorage.getItem(OrdersKey)||'[]');
+        } catch(e){ console.warn(e); }
+      },
+      save(){ localStorage.setItem(StoreKey, JSON.stringify(this.data)); },
+      saveCart(){ localStorage.setItem(CartKey, JSON.stringify(this.cart)); this.updateCartCount(); },
+      saveOrders(){ localStorage.setItem(OrdersKey, JSON.stringify(this.orders)); },
+      observeReveal(){
+        const io = new IntersectionObserver(entries=>{
+          entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in-view'); io.unobserve(e.target);} });
+        }, {threshold:.1});
+        document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+      },
+      route(){
+        const hash = location.hash.replace('#','')||'/';
+        this.currentRoute = hash;
+        const [path,queryStr] = hash.split('?');
+        const params = new URLSearchParams(queryStr||'');
+        this.setActiveNav(path);
+        switch(true){
+          case path === '/': this.renderHome(); break;
+          case path.startsWith('/products'): this.renderProducts(params); break;
+          case path.startsWith('/product/'): this.renderProduct(path.split('/product/')[1]); break;
+          case path.startsWith('/software'): this.renderSoftware(); break;
+          case path.startsWith('/migration'): this.renderMigration(); break;
+          case path.startsWith('/support'): this.renderSupport(); break;
+          case path.startsWith('/cart'): this.renderCart(); break;
+          case path.startsWith('/checkout'): this.renderCheckout(); break;
+          case path.startsWith('/order/'): this.renderConfirmation(path.split('/order/')[1]); break;
+          case path.startsWith('/admin'): this.renderAdmin(); break;
+          case path.startsWith('/privacy'): this.renderStatic('Privacy Policy','We respect your privacy. HIPAA-ready best practices and minimal data collection.'); break;
+          case path.startsWith('/terms'): this.renderStatic('Terms of Service','Use of this site and services is subject to standard terms.'); break;
+          case path.startsWith('/returns'): this.renderStatic('Returns & Warranty','30-day returns on hardware in original condition. 24-month warranty.'); break;
+          case path.startsWith('/warranty'): this.renderStatic('Warranty','Hardware warranty 24 months. Typical turnaround 5–7 business days.'); break;
+          case path.startsWith('/about'): this.renderStatic('About Titronics','Innovating chiropractic instrumentation and cloud since 1989.'); break;
+          case path.startsWith('/careers'): this.renderStatic('Careers','We’re hiring across hardware, software, and customer success.'); break;
+          default: this.render404();
+        }
+        window.scrollTo({top:0, behavior:'smooth'});
+      },
+      setActiveNav(path){
+        document.querySelectorAll('nav.primary a').forEach(a=>{
+          if(a.getAttribute('href') === '#'+path) a.classList.add('active'); else a.classList.remove('active');
+        });
+      },
+      currency(n){ return new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(n||0); },
+      slugify(s){ return s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,''); },
+      searchQuery(q){
+        if(!this.fuse) this.initSearch();
+        if(!q) return [];
+        return this.fuse.search(q,{limit:6}).map(r=>r.item);
+      },
+      initSearch(){
+        try{
+          this.fuse = new Fuse(this.data.products, { keys:['name','short','description','category','sku'], threshold:.35 });
+        }catch(e){}
+        const input = document.getElementById('search-input');
+        const suggest = document.getElementById('search-suggest');
+        if(!input) return;
+        const deb = (fn,wait)=>{ let t; return (...a)=>{ clearTimeout(t); t=setTimeout(()=>fn(...a),wait); } };
+        input.addEventListener('input', deb(()=>{
+          const q = input.value.trim();
+          suggest.innerHTML='';
+          if(!q){ suggest.classList.remove('visible'); return; }
+          const results = this.searchQuery(q);
+          if(results.length===0){ suggest.classList.remove('visible'); return; }
+          results.forEach(p=>{
+            const row = document.createElement('a');
+            row.href = '#/product/'+p.slug;
+            row.innerHTML = `<img src="${(p.images&&p.images[0])||''}" alt="" style="width:44px;height:44px;object-fit:cover;border-radius:8px;border:1px solid rgba(2,6,23,.08)" loading="lazy"/><div><div style="font-weight:700">${p.name}</div><div class="mini">${p.category} • ${this.currency(p.salePrice||p.price)}</div></div>`;
+            suggest.appendChild(row);
+          });
+          suggest.classList.add('visible');
+        }, 160));
+        document.addEventListener('click',(e)=>{
+          if(!suggest.contains(e.target) && e.target!==input){ suggest.classList.remove('visible'); }
+        });
+        input.addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ location.hash = `#/products?q=${encodeURIComponent(input.value.trim())}`; suggest.classList.remove('visible'); }});
+      },
+      hero(){
+        return `
+        <section class="hero">
+          <div class="container">
+            <div class="reveal">
+              <div class="eyebrow"><span>Healthcare-Tech</span><span class="badge">Trusted by clinics worldwide</span></div>
+              <h1>Clinical-grade chiropractic equipment with modern cloud software</h1>
+              <p class="lead">Deliver objective findings with credibility and ease. Thermography, sEMG, posture analysis, and HIPAA‑ready cloud—built for clarity and outcomes.</p>
+              <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin:1rem 0 1.2rem">
+                <a class="btn btn-primary" href="#/products"><span class="icon">🛒</span> Shop Equipment</a>
+                <a class="btn btn-outline" href="#/software"><span class="icon">☁️</span> Explore Cloud</a>
+                <a class="btn btn-outline" href="#/migration"><span class="icon">🛠️</span> Migrate to Cloud</a>
+              </div>
+              <div class="trust">
+                <img src="https://dummyimage.com/120x28/ffffff/aaa&text=HIPAA+Ready" alt="HIPAA Ready" />
+                <img src="https://dummyimage.com/120x28/ffffff/aaa&text=USA+Clinics" alt="Used by Clinics" />
+                <img src="https://dummyimage.com/120x28/ffffff/aaa&text=Secure+Cloud" alt="Secure Cloud" />
+                <img src="https://dummyimage.com/120x28/ffffff/aaa&text=24+mo+Warranty" alt="24 month warranty" />
+              </div>
+            </div>
+            <div class="hero-card reveal">
+              <img src="https://i.postimg.cc/jSYhHRLS/Titronics-Researchh-Development2-1.png?auto=format&fit=crop&w=1200&q=80" alt="Titronics equipment and cloud dashboard" style="border-radius:12px;aspect-ratio:16/11;object-fit:cover" />
+              <div style="display:flex;gap:.6rem;margin-top:.7rem;flex-wrap:wrap">
+                <span class="chip"><strong>99.9%</strong> Cloud uptime</span>
+                <span class="chip">End‑to‑end encryption</span>
+                <span class="chip">Priority support</span>
+              </div>
+            </div>
+          </div>
+        </section>`;
+      },
+      renderHome(){
+        document.title = "Titronics | Professional Chiropractic Equipment & Cloud Software";
+        const featured = this.data.products.filter(p=>['Thermography','sEMG','Software'].includes(p.category)).slice(0,3);
+        const accessories = this.data.products.filter(p=>p.category==='Accessories').slice(0,2);
+        const html = `
+          ${this.hero()}
+          <section class="section">
+            <div class="container">
+              <h2>Featured solutions</h2>
+              <div class="grid grid-3">
+                ${featured.map(p=>this.productCard(p)).join('')}
+              </div>
+              <div style="margin-top:1rem"><a class="btn btn-outline" href="#/products">Browse all products</a></div>
+            </div>
+          </section>
+          <section class="section" style="background:linear-gradient(180deg,#f9fbff,#ffffff)">
+            <div class="container">
+              <div class="grid grid-2">
+                <div class="panel reveal">
+                  <span class="badge pill-green">Cloud Software</span>
+                  <h3 style="margin:.4rem 0">Titronics Cloud: secure, simple, scalable</h3>
+                  <p class="lead">Centralize device data, compare visits, and generate patient‑friendly visuals. Built for teams with unlimited users.</p>
+                  <ul style="margin:.6rem 0 1rem;line-height:1.9">
+                    <li>• HIPAA‑ready, encrypted at rest and in transit</li>
+                    <li>• Auto‑sync from devices, instant reports</li>
+                    <li>• Role‑based access, audit logs, and backups</li>
+                  </ul>
+                  <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+                    <a class="btn btn-primary" href="#/software#pricing">View Pricing</a>
+                    <a class="btn btn-outline" href="#/migration">Migrate from legacy software</a>
+                  </div>
+                </div>
+                <div class="reveal">
+                  <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1400&q=80" alt="Titronics Cloud dashboard" style="border-radius:16px;box-shadow:var(--shadow-md)" loading="lazy" />
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section">
+            <div class="container">
+              <h2>Accessories</h2>
+              <div class="grid grid-3">
+                ${accessories.map(p=>this.productCard(p)).join('')}
+              </div>
+            </div>
+          </section>
+          <section class="section">
+            <div class="container">
+              <div class="grid grid-3">
+                <div class="panel reveal">
+                  <h3>Why clinics choose Titronics</h3>
+                  <p>We focus on clarity, consistency, and credibility—so you can focus on care.</p>
+                  <ul style="line-height:1.9;margin:.6rem 0">
+                    <li>• Clinical‑grade accuracy</li>
+                    <li>• Fast onboarding and support</li>
+                    <li>• Secure cloud with unlimited staff</li>
+                    <li>• Easy admin for non‑technical teams</li>
+                  </ul>
+                </div>
+                <div class="panel reveal">
+                  <h3>Migration & support</h3>
+                  <p>Moving from local software? Our concierge team handles your database migration and validation.</p>
+                  <a class="btn btn-outline" href="#/migration">Learn more</a>
+                </div>
+                <div class="panel reveal">
+                  <h3>Trusted by clinics</h3>
+                  <p>“Clear visuals, faster visits, confident communication. The cloud makes everything easier.”</p>
+                  <div class="rating" aria-label="Rating 4.9 out of 5">
+                    ${this.stars(4.9)}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        `;
+        document.getElementById('view').innerHTML = html;
+        this.observeReveal();
+      },
+      productCard(p){
+        const price = p.salePrice ? `<span class="sale">${this.currency(p.salePrice)}</span><span class="old">${this.currency(p.price)}</span>` : `<span>${this.currency(p.price)}</span>`;
+        return `
+          <article class="card reveal">
+            <a href="#/product/${p.slug}" class="media" aria-label="${p.name}">
+              <img src="${(p.images&&p.images[0])||''}" alt="${p.name}" loading="lazy" />
+              ${p.badge?`<div style="position:absolute;left:10px;top:10px" class="badge">${p.badge}</div>`:''}
+            </a>
+            <div class="content">
+              <div class="mini" style="color:#0369a1;font-weight:700">${p.category}</div>
+              <a href="#/product/${p.slug}" style="font-weight:800;display:block;margin:.2rem 0 .1rem">${p.name}</a>
+              <div class="mini">${p.short}</div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:.6rem">
+                <div class="price">${price}</div>
+                <div class="rating" aria-label="Rating ${p.rating}">
+                  ${this.stars(p.rating)}
+                </div>
+              </div>
+              <div style="display:flex;gap:.4rem;margin-top:.8rem">
+                <button class="btn btn-primary" onclick="App.addToCart('${p.id}',1)">Add to Cart</button>
+                <a class="btn btn-outline" href="#/product/${p.slug}">Details</a>
+              </div>
+            </div>
+          </article>
+        `;
+      },
+      stars(v){
+        const full = Math.round(v);
+        return Array.from({length:5}).map((_,i)=>`<svg width="16" height="16" viewBox="0 0 24 24" fill="${i<full?'#f59e0b':'#e5e7eb'}"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>`).join('');
+      },
+      renderProducts(params){
+        document.title = "Shop Products | Titronics";
+        const q = params.get('q');
+        const cat = params.get('cat');
+        let products = this.data.products.slice();
+        if(cat) products = products.filter(p=>p.category===cat);
+        if(q){ products = this.searchQuery(q); }
+        const cats = Array.from(new Set(this.data.products.map(p=>p.category)));
+        const html = `
+          <section class="section container">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:.6rem;flex-wrap:wrap">
+              <h2>Product Catalog</h2>
+              <div class="mini">Fast filtering • Secure checkout • Free shipping $1,500+</div>
+            </div>
+            <div class="filters">
+              <div class="filter">
+                <label for="f-cat" class="sr-only">Category</label>
+                <select id="f-cat" onchange="App.applyFilter()">
+                  <option value="">All categories</option>
+                  ${cats.map(c=>`<option ${cat===c?'selected':''}>${c}</option>`).join('')}
+                </select>
+              </div>
+              <div class="filter">
+                <label for="f-min" class="sr-only">Min price</label>
+                <input id="f-min" type="number" min="0" placeholder="Min $" style="width:110px" oninput="App.applyFilter()" />
+              </div>
+              <div class="filter">
+                <label for="f-max" class="sr-only">Max price</label>
+                <input id="f-max" type="number" min="0" placeholder="Max $" style="width:110px" oninput="App.applyFilter()" />
+              </div>
+              <div class="filter">
+                <label for="f-sort" class="sr-only">Sort</label>
+                <select id="f-sort" onchange="App.applyFilter()">
+                  <option value="">Sort</option>
+                  <option value="price-asc">Price: Low to High</option>
+                  <option value="price-desc">Price: High to Low</option>
+                  <option value="rating-desc">Rating</option>
+                </select>
+              </div>
+              <div class="filter" style="flex:1;min-width:220px;display:flex;align-items:center;gap:.4rem">
+                <input id="f-q" placeholder="Search catalog..." style="flex:1" value="${q||''}" oninput="App.applyFilter()" />
+                <button class="btn btn-outline" onclick="App.clearFilters()">Clear</button>
+              </div>
+            </div>
+            <div id="catalog" class="grid grid-3">
+              ${products.map(p=>this.productCard(p)).join('')}
+            </div>
+          </section>
+        `;
+        document.getElementById('view').innerHTML = html;
+        this.observeReveal();
+        // store temp results in state
+        this._listFilter = { cat, q, min:null, max:null, sort:null };
+        this._listProductsBase = this.data.products.slice();
+      },
+      applyFilter(){
+        const catSel = document.getElementById('f-cat')?.value || '';
+        const min = parseFloat(document.getElementById('f-min')?.value || '0')||0;
+        const max = parseFloat(document.getElementById('f-max')?.value || '0')||0;
+        const sort = document.getElementById('f-sort')?.value || '';
+        const q = (document.getElementById('f-q')?.value||'').trim().toLowerCase();
+        let list = this._listProductsBase.slice();
+        if(catSel) list = list.filter(p=>p.category===catSel);
+        if(min>0) list = list.filter(p=>(p.salePrice||p.price)>=min);
+        if(max>0) list = list.filter(p=>(p.salePrice||p.price)<=max);
+        if(q) list = list.filter(p=> (p.name+' '+p.short+' '+p.description).toLowerCase().includes(q));
+        switch(sort){
+          case 'price-asc': list.sort((a,b)=>(a.salePrice||a.price)-(b.salePrice||b.price)); break;
+          case 'price-desc': list.sort((a,b)=>(b.salePrice||b.price)-(a.salePrice||a.price)); break;
+          case 'rating-desc': list.sort((a,b)=>b.rating-a.rating); break;
+        }
+        const catalog = document.getElementById('catalog');
+        if(catalog) catalog.innerHTML = list.map(p=>this.productCard(p)).join('');
+      },
+      clearFilters(){
+        ['f-cat','f-min','f-max','f-sort','f-q'].forEach(id=>{ const el=document.getElementById(id); if(el){ el.value=''; } });
+        this.applyFilter();
+      },
+      renderProduct(slug){
+        const p = this.data.products.find(x=>x.slug===slug) || this.data.products[0];
+        document.title = `${p.name} | Titronics`;
+        this.injectProductJsonLd(p);
+        const price = p.salePrice ? `<span class="sale">${this.currency(p.salePrice)}</span><span class="old">${this.currency(p.price)}</span>` : `<span>${this.currency(p.price)}</span>`;
+        const gallery = `
+          <div class="gallery">
+            <div class="gallery-main" id="gal-main">
+              <img src="${(p.images&&p.images[0])||''}" alt="${p.name}" onclick="openLightbox('${(p.images&&p.images[0])||''}')" />
+            </div>
+            <div class="thumbs">
+              ${(p.images||[]).map((src,i)=>`<button onclick="document.querySelector('#gal-main img').src='${src}';"><img src="${src}" alt="Thumbnail ${i+1} of ${p.name}" /></button>`).join('')}
+            </div>
+          </div>
+        `;
+        const isSub = p.type==='subscription';
+        const priceBlock = isSub ? `
+          <div class="field">
+            <label>Billing</label>
+            <select id="sub-plan">
+              <option value="monthly">Monthly — ${this.currency(p.priceMonthly)}</option>
+              <option value="annual">Annual — ${this.currency(p.priceAnnual)} (save ${this.currency(p.priceMonthly*12 - p.priceAnnual)})</option>
+            </select>
+          </div>
+        ` : '';
+        const resources = (p.resources||[]).length?`
+          <div class="panel">
+            <strong>Resources</strong>
+            <ul style="margin:.6rem 0;line-height:1.8">
+              ${(p.resources||[]).map(r=>`<li>• <a href="${r.url}" target="_blank" rel="noopener">${r.label}</a></li>`).join('')}
+            </ul>
+          </div>`:'';
+        const related = this.data.products.filter(x=>x.category===p.category && x.id!==p.id).slice(0,3);
+        const html = `
+          <section class="section container">
+            <nav class="breadcrumbs">
+              <a href="#/">Home</a> › <a href="#/products">Products</a> › <span>${p.name}</span>
+            </nav>
+            <div class="product-page">
+              <div>${gallery}</div>
+              <div class="sticky">
+                <div class="panel">
+                  <div class="mini" style="color:#0369a1;font-weight:700">${p.category}</div>
+                  <h1 style="margin:.2rem 0">${p.name}</h1>
+                  <div style="display:flex;align-items:center;gap:.6rem">
+                    <div class="rating">${this.stars(p.rating)}</div>
+                    <div class="mini">(${p.reviewsCount} reviews)</div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="price" style="font-size:1.4rem">${isSub?`<span>${this.currency(p.priceMonthly)}/mo</span>`:price}</div>
+                  <p style="margin:.6rem 0">${p.short}</p>
+                  ${priceBlock}
+                  <div class="field">
+                    <label>Quantity</label>
+                    <input id="qty" type="number" min="1" value="1" style="max-width:120px" />
+                  </div>
+                  <div style="display:flex;gap:.5rem;margin-top:.6rem;flex-wrap:wrap">
+                    <button class="btn btn-primary" onclick="App.addToCart('${p.id}', parseInt(document.getElementById('qty').value||1), ${isSub?1:0})">Add to Cart</button>
+                    <a class="btn btn-outline" href="#/checkout">Buy Now</a>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="mini">Secure checkout • Credit cards & PayPal • 24‑month hardware warranty</div>
+                </div>
+                <div class="specs">
+                  ${p.specs?.map(s=>`<div class="spec"><div class="mini" style="font-weight:700">${s.label}</div><div>${s.value}</div></div>`).join('')||''}
+                </div>
+                <div style="margin-top:.8rem">${resources}</div>
+              </div>
+            </div>
+            <div class="panel" style="margin-top:1rem">
+              <h3>Details</h3>
+              <p>${p.description}</p>
+            </div>
+            <div class="rec">
+              <h3>Related</h3>
+              <div class="grid grid-3">
+                ${related.map(r=>this.productCard(r)).join('') || '<div class="mini">No related items.</div>'}
+              </div>
+            </div>
+          </section>
+        `;
+        document.getElementById('view').innerHTML = html;
+      },
+      renderSoftware(){
+        document.title = "Titronics Cloud | Secure Chiropractic Software";
+        const cloud = this.data.products.find(p=>p.id==='p-cloud');
+        const upgrade = this.data.products.find(p=>p.id==='p-cloud-upgrade');
+        const html = `
+          <section class="section container">
+            <div class="grid grid-2">
+              <div class="reveal">
+                <span class="badge">Cloud Platform</span>
+                <h2 style="margin:.4rem 0">Titronics Cloud</h2>
+                <p class="lead">HIPAA‑ready cloud storage, analytics, and reporting across all your devices with unlimited staff access.</p>
+                <ul style="line-height:1.9;margin:1rem 0">
+                  <li>• Unlimited users, devices, and storage</li>
+                  <li>• Clinic‑level roles and audit logs</li>
+                  <li>• Instant, patient‑ready visuals</li>
+                  <li>• Secure API for integrations</li>
+                </ul>
+                <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+                  <a class="btn btn-primary" href="#/product/${cloud.slug}">View Details</a>
+                  <a class="btn btn-outline" href="#/migration">Migrate to Cloud</a>
+                </div>
+              </div>
+              <div class="reveal">
+                <img src="https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=1400&q=80" alt="Cloud analytics" style="border-radius:16px;box-shadow:var(--shadow-md)"/>
+              </div>
+            </div>
+          </section>
+          <section class="section container" id="pricing">
+            <h2>Simple pricing</h2>
+            <div class="grid grid-3">
+              <div class="panel">
+                <strong>${cloud.name}</strong>
+                <div class="divider"></div>
+                <div><span class="badge">Monthly</span> <span style="font-weight:800;font-size:1.4rem">${this.currency(cloud.priceMonthly)}/mo</span></div>
+                <div><span class="badge">Annual</span> <span style="font-weight:800;font-size:1.4rem">${this.currency(cloud.priceAnnual)}/yr</span></div>
+                <div class="divider"></div>
+                <button class="btn btn-primary" onclick="App.addToCart('${cloud.id}',1,true)">Add to Cart</button>
+              </div>
+              <div class="panel">
+                <strong>${upgrade.name}</strong>
+                <div class="divider"></div>
+                <div><span class="badge">Monthly</span> <span style="font-weight:800;font-size:1.4rem">${this.currency(upgrade.priceMonthly)}/mo</span></div>
+                <div><span class="badge">Annual</span> <span style="font-weight:800;font-size:1.4rem">${this.currency(upgrade.priceAnnual)}/yr</span></div>
+                <div class="divider"></div>
+                <button class="btn btn-primary" onclick="App.addToCart('${upgrade.id}',1,true)">Add to Cart</button>
+              </div>
+              <div class="panel">
+                <strong>Migration Service</strong>
+                <div class="divider"></div>
+                <div style="font-weight:800;font-size:1.4rem">${this.currency(399)}</div>
+                <div class="divider"></div>
+                <button class="btn btn-outline" onclick="location.hash='#/migration'">Learn More</button>
+              </div>
+            </div>
+          </section>
+        `;
+        document.getElementById('view').innerHTML = html;
+      },
+      renderMigration(){
+        document.title = "Migrate to Cloud | Titronics";
+        const html = `
+          <section class="section container">
+            <div class="grid grid-2">
+              <div class="panel">
+                <span class="badge pill-green">Migration</span>
+                <h2>From legacy local to secure cloud—without the headache</h2>
+                <p class="lead">Our concierge migration includes preflight checks, secure transfer, validation, and go‑live support with minimal downtime.</p>
+                <ol style="line-height:1.9;margin:1rem 0;padding-left:1.2rem">
+                  <li>Export your database backup</li>
+                  <li>Upload securely to our team</li>
+                  <li>Validation & test environment</li>
+                  <li>Switch‑over and staff training</li>
+                </ol>
+                <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+                  <button class="btn btn-primary" onclick="document.getElementById('migrate-form').scrollIntoView({behavior:'smooth'})">Start Migration</button>
+                  <button class="btn btn-outline" onclick="toggleChat(true); presetChat('Need help migrating from local to cloud.')">Chat with Specialist</button>
+                </div>
+              </div>
+              <div class="panel">
+                <h3>FAQ</h3>
+                <details>
+                  <summary>How long does migration take?</summary>
+                  <p>Most clinics migrate in 2–5 business days.</p>
+                </details>
+                <details>
+                  <summary>Is my data secure?</summary>
+                  <p>Yes. Data is encrypted at-rest and in-transit with strict access controls.</p>
+                </details>
+                <details>
+                  <summary>Can I keep historic records?</summary>
+                  <p>Yes. We transfer and validate your historic data.</p>
+                </details>
+              </div>
+            </div>
+            <div id="migrate-form" class="panel" style="margin-top:1rem">
+              <h3>Schedule migration</h3>
+              <form class="form" onsubmit="event.preventDefault();App.submitMigration(this)">
+                <div class="grid grid-2">
+                  <div class="field"><label>Clinic Name</label><input required name="clinic" /></div>
+                  <div class="field"><label>Contact Email</label><input required type="email" name="email" /></div>
+                </div>
+                <div class="grid grid-2">
+                  <div class="field"><label>Phone</label><input name="phone" /></div>
+                  <div class="field"><label>Preferred Date</label><input type="date" name="date" /></div>
+                </div>
+                <div class="field"><label>Notes</label><textarea name="notes" rows="3" placeholder="Current software, version, special requirements…"></textarea></div>
+                <div class="field"><label>Upload backup (optional)</label><input type="file" /></div>
+                <div><button class="btn btn-primary" type="submit">Request Migration</button></div>
+              </form>
+            </div>
+          </section>
+        `;
+        document.getElementById('view').innerHTML = html;
+      },
+      renderSupport(){
+        document.title = "Support | Titronics";
+        const html = `
+          <section class="section container" id="contact">
+            <div class="grid grid-3">
+              <div class="panel">
+                <h3>Contact</h3>
+                <p>Email support@titronics.com • Phone +1 (800) 555-0199</p>
+                <button class="btn btn-primary" onclick="toggleChat(true)">Open Chat</button>
+              </div>
+              <div class="panel">
+                <h3>Downloads</h3>
+                <ul style="line-height:1.9;margin:.6rem 0">
+                  <li>• Drivers & Utilities</li>
+                  <li>• Product manuals</li>
+                  <li>• Compliance statements</li>
+                </ul>
+              </div>
+              <div class="panel">
+                <h3>Training</h3>
+                <p>Onboarding sessions for your team. Live and recorded modules.</p>
+                <a class="btn btn-outline" href="#/support#training">Request Training</a>
+              </div>
+            </div>
+          </section>
+        `;
+        document.getElementById('view').innerHTML = html;
+      },
+      renderCart(){
+        document.title = "Cart | Titronics";
+        const items = this.cart.map(ci=>{
+          const p = this.getProduct(ci.productId);
+          const unit = this.itemUnitPrice(p, ci);
+          return {...ci, product:p, unit};
+        });
+        const subtotal = items.reduce((a,c)=>a + c.unit*c.qty, 0);
+        const shipping = this.estimateShipping(subtotal);
+        const tax = this.estimateTax(subtotal);
+        const total = subtotal + shipping + tax;
+        const html = `
+          <section class="section container">
+            <h2>Your Cart</h2>
+            ${items.length?`
+              <div class="grid grid-3">
+                <div class="grid-3" style="grid-template-columns:1.6fr 1fr">
+                  <div class="panel">
+                    <table class="table" style="width:100%">
+                      <tbody>
+                        ${items.map(line=>`
+                          <tr>
+                            <td style="display:flex;gap:.6rem;align-items:center">
+                              <img src="${line.product.images?.[0]||''}" alt="${line.product.name}" style="width:72px;height:72px;object-fit:cover;border-radius:10px;border:1px solid rgba(2,6,23,.08)" />
+                              <div>
+                                <div style="font-weight:800">${line.product.name}</div>
+                                <div class="mini">${line.product.category}${line.plan?` • ${line.plan}`:''}</div>
+                              </div>
+                            </td>
+                            <td style="text-align:right">
+                              <div class="mini">Unit</div>
+                              <div>${this.currency(line.unit)}</div>
+                              <div style="margin-top:.4rem;display:flex;gap:.3rem;justify-content:flex-end;align-items:center">
+                                <input type="number" min="1" value="${line.qty}" style="width:72px" onchange="App.updateQty('${line.productId}', this.value, '${line.plan||''}')" />
+                                <button class="btn btn-ghost" onclick="App.removeFromCart('${line.productId}','${line.plan||''}')">Remove</button>
+                              </div>
+                            </td>
+                          </tr>
+                        `).join('')}
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="summary panel">
+                    <strong>Order Summary</strong>
+                    <div class="divider"></div>
+                    <div class="line"><span>Subtotal</span><span>${this.currency(subtotal)}</span></div>
+                    <div class="line"><span>Shipping</span><span>${shipping===0? 'Free' : this.currency(shipping)}</span></div>
+                    <div class="line"><span>Est. Tax</span><span>${this.currency(tax)}</span></div>
+                    <div class="total line"><span>Total</span><span>${this.currency(total)}</span></div>
+                    <div class="divider"></div>
+                    <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+                      <a class="btn btn-primary" href="#/checkout">Checkout</a>
+                      <a class="btn btn-outline" href="#/products">Continue shopping</a>
+                    </div>
+                    <div class="mini" style="margin-top:.6rem">Secure checkout • Credit cards & PayPal</div>
+                  </div>
+                </div>
+              </div>
+            `:'<p>Your cart is empty. <a href="#/products">Shop products</a>.</p>'}
+          </section>
+        `;
+        document.getElementById('view').innerHTML = html;
+      },
+      itemUnitPrice(product, ci){
+        if(product.type==='subscription'){
+          if(ci.plan==='annual') return product.priceAnnual;
+          return product.priceMonthly;
+        }
+        return product.salePrice || product.price;
+      },
+      estimateShipping(subtotal){
+        const r = this.data.settings.shippingRules;
+        if(subtotal >= r.freeThreshold) return 0;
+        return r.ground;
+      },
+      estimateTax(subtotal, state){
+        const rate = state? (this.data.settings.taxByState[state]||this.data.settings.defaultTax) : this.data.settings.defaultTax;
+        return +(subtotal * rate).toFixed(2);
+      },
+      addToCart(productId, qty=1, promptPlan=false){
+        const p = this.getProduct(productId);
+        let plan = '';
+        if(p.type==='subscription'){
+          if(promptPlan){
+            plan = 'monthly';
+          }else{
+            const el = document.getElementById('sub-plan');
+            plan = el? el.value : 'monthly';
+          }
+        }
+        const existing = this.cart.find(i=>i.productId===productId && (i.plan||'')===plan);
+        if(existing) existing.qty += qty;
+        else this.cart.push({ productId, qty, plan: plan||undefined });
+        this.saveCart();
+        this.toast(p.name + ' added to cart');
+      },
+      updateQty(productId, q, plan){
+        const item = this.cart.find(i=>i.productId===productId && (i.plan||'')===(plan||''));
+        if(item){ item.qty = Math.max(1, parseInt(q||1)); this.saveCart(); this.renderCart(); }
+      },
+      removeFromCart(productId, plan){
+        this.cart = this.cart.filter(i=> !(i.productId===productId && (i.plan||'')===(plan||'')) );
+        this.saveCart(); this.renderCart();
+      },
+      getProduct(id){ return this.data.products.find(p=>p.id===id); },
+      updateCartCount(){
+        const count = this.cart.reduce((a,c)=>a+c.qty,0);
+        const el = document.getElementById('cart-count'); if(el) el.textContent = count;
+        const fab = document.getElementById('fab-count'); if(fab) fab.textContent = count;
+      },
+      renderCheckout(){
+        document.title = "Checkout | Titronics";
+        const items = this.cart.map(ci=>{
+          const p = this.getProduct(ci.productId);
+          const unit = this.itemUnitPrice(p, ci);
+          return {...ci, product:p, unit};
+        });
+        if(items.length===0){ location.hash = '#/cart'; return; }
+        const subtotal = items.reduce((a,c)=>a + c.unit*c.qty, 0);
+        const shipping = this.estimateShipping(subtotal);
+        const tax = this.estimateTax(subtotal);
+        const total = subtotal + shipping + tax;
+        const html = `
+          <section class="section container">
+            <h2>Checkout</h2>
+            <div class="checkout-steps">
+              <div class="step active"><span class="kbd">1</span> Shipping</div>
+              <div class="step"><span class="kbd">2</span> Payment</div>
+              <div class="step"><span class="kbd">3</span> Review</div>
+            </div>
+            <div class="grid grid-2">
+              <form id="checkout-form" class="form panel" onsubmit="event.preventDefault();App.checkoutNext()">
+                <div id="step-1">
+                  <div class="field"><label>Full Name</label><input required name="name" autocomplete="name" /></div>
+                  <div class="field"><label>Email</label><input required type="email" name="email" autocomplete="email" /></div>
+                  <div class="field"><label>Phone</label><input name="phone" autocomplete="tel" /></div>
+                  <div class="field"><label>Address</label><input required name="address" autocomplete="address-line1" /></div>
+                  <div class="grid grid-3">
+                    <div class="field"><label>City</label><input required name="city" autocomplete="address-level2" /></div>
+                    <div class="field"><label>State</label>
+                      <select name="state" required>
+                        <option value="">Select</option>
+                        <option>CA</option><option>FL</option><option>TX</option><option>NY</option><option>WA</option><option>Other</option>
+                      </select>
+                    </div>
+                    <div class="field"><label>ZIP</label><input required name="zip" autocomplete="postal-code" /></div>
+                  </div>
+                  <div class="field"><label>Shipping Method</label>
+                    <select name="shipping">
+                      <option value="ground">Ground — ${shipping===0?'Free':this.currency(this.data.settings.shippingRules.ground)}</option>
+                      <option value="expedited">Expedited — ${this.currency(this.data.settings.shippingRules.expedited)}</option>
+                    </select>
+                  </div>
+                  <div class="field"><label>Coupon Code</label>
+                    <div style="display:flex;gap:.4rem"><input id="coupon" placeholder="Enter code" /><button class="btn btn-outline" type="button" onclick="App.applyCoupon()">Apply</button></div>
+                    <div id="coupon-note" class="mini"></div>
+                  </div>
+                  <div style="display:flex;gap:.6rem;margin-top:.4rem">
+                    <button class="btn btn-primary" type="submit">Continue to Payment</button>
+                    <a class="btn btn-outline" href="#/cart">Back to Cart</a>
+                  </div>
+                </div>
+                <div id="step-2" class="hidden">
+                  <div class="field"><label>Payment Method</label>
+                    <select id="pay-method" onchange="App.togglePayment()">
+                      <option value="card">Credit / Debit Card</option>
+                      <option value="paypal">PayPal</option>
+                    </select>
+                  </div>
+                  <div id="card-fields">
+                    <div class="field"><label>Card Number</label><input id="card-number" inputmode="numeric" placeholder="4242 4242 4242 4242" /></div>
+                    <div class="grid grid-3">
+                      <div class="field"><label>Exp</label><input id="card-exp" placeholder="MM/YY" /></div>
+                      <div class="field"><label>CVC</label><input id="card-cvc" placeholder="CVC" /></div>
+                      <div class="field"><label>Name on Card</label><input id="card-name" /></div>
+                    </div>
+                  </div>
+                  <div id="paypal-fields" class="hidden">
+                    <p>Click continue to pay with PayPal.</p>
+                  </div>
+                  <div style="display:flex;gap:.6rem;margin-top:.4rem">
+                    <button class="btn btn-primary" type="button" onclick="App.checkoutNext()">Review Order</button>
+                    <button class="btn btn-outline" type="button" onclick="App.checkoutPrev()">Back</button>
+                  </div>
+                </div>
+                <div id="step-3" class="hidden">
+                  <div class="panel" style="background:#f8fafc">
+                    <strong>Review & Place Order</strong>
+                    <p class="mini">You’ll receive an order confirmation by email.</p>
+                  </div>
+                  <div style="display:flex;gap:.6rem;margin-top:.4rem">
+                    <button class="btn btn-primary" type="button" onclick="App.placeOrder()">Place Order</button>
+                    <button class="btn btn-outline" type="button" onclick="App.checkoutPrev()">Back</button>
+                  </div>
+                </div>
+              </form>
+              <div class="summary panel">
+                <strong>Order Summary</strong>
+                <div class="divider"></div>
+                <div id="summary-items">
+                  ${items.map(line=>`
+                    <div class="line"><span>${line.product.name}${line.plan?` (${line.plan})`:''} × ${line.qty}</span><span>${this.currency(line.unit*line.qty)}</span></div>
+                  `).join('')}
+                </div>
+                <div class="line"><span>Subtotal</span><span id="sum-sub">${this.currency(subtotal)}</span></div>
+                <div class="line"><span>Shipping</span><span id="sum-ship">${shipping===0? 'Free' : this.currency(shipping)}</span></div>
+                <div class="line"><span>Tax</span><span id="sum-tax">${this.currency(tax)}</span></div>
+                <div class="total line"><span>Total</span><span id="sum-total">${this.currency(total)}</span></div>
+                <div class="mini" style="margin-top:.6rem">SSL-secured. We do not store card numbers.</div>
+              </div>
+            </div>
+          </section>
+        `;
+        document.getElementById('view').innerHTML = html;
+        this._checkoutStep = 1;
+        this._coupon = null;
+        this._shippingOverride = null;
+        this._payMethod = 'card';
+      },
+      togglePayment(){
+        const method = document.getElementById('pay-method').value;
+        this._payMethod = method;
+        document.getElementById('card-fields').classList.toggle('hidden', method!=='card');
+        document.getElementById('paypal-fields').classList.toggle('hidden', method!=='paypal');
+      },
+      applyCoupon(){
+        const code = (document.getElementById('coupon').value||'').trim().toUpperCase();
+        const c = (this.data.promotions.coupons||[]).find(x=>x.code.toUpperCase()===code && x.active);
+        const note = document.getElementById('coupon-note');
+        if(!c){ note.textContent = 'Invalid or inactive code.'; note.style.color = '#ef4444'; this._coupon = null; return; }
+        this._coupon = c;
+        note.textContent = `Applied ${c.type==='percent'?c.value+'%':this.currency(c.value)} discount.`;
+        note.style.color = '#065f46';
+        this.updateSummary();
+      },
+      updateSummary(){
+        const items = this.cart.map(ci=>{
+          const p = this.getProduct(ci.productId);
+          const unit = this.itemUnitPrice(p, ci);
+          return {...ci, product:p, unit};
+        });
+        let subtotal = items.reduce((a,c)=>a + c.unit*c.qty, 0);
+        if(this._coupon){
+          if(this._coupon.type==='percent'){ subtotal = subtotal * (1 - this._coupon.value/100); }
+          else { subtotal = Math.max(0, subtotal - this._coupon.value); }
+        }
+        const shipSel = document.querySelector('select[name="shipping"]');
+        const shippingMethod = shipSel? shipSel.value : 'ground';
+        const shipping = (shippingMethod==='expedited')? this.data.settings.shippingRules.expedited : this.estimateShipping(subtotal);
+        const state = document.querySelector('select[name="state"]')?.value || '';
+        const tax = this.estimateTax(subtotal, state==='Other'?null:state);
+        const total = subtotal + shipping + tax;
+        const set = (id, val)=>{ const el = document.getElementById(id); if(el) el.textContent = (typeof val==='number')? this.currency(val):val; }
+        set('sum-sub', subtotal);
+        set('sum-ship', shipping===0? 'Free' : shipping);
+        set('sum-tax', tax);
+        set('sum-total', total);
+      },
+      checkoutNext(){
+        if(this._checkoutStep===1){
+          // basic validation
+          const form = document.getElementById('checkout-form');
+          const required = ['name','email','address','city','state','zip'];
+          for(const f of required){
+            const el = form.querySelector(`[name="${f}"]`);
+            if(!el || !el.value.trim()){ this.toast('Please complete shipping fields'); return; }
+          }
+          form.querySelector('#step-1').classList.add('hidden');
+          form.querySelector('#step-2').classList.remove('hidden');
+          this._checkoutStep=2;
+        } else if(this._checkoutStep===2){
+          if(this._payMethod==='card'){
+            const num = document.getElementById('card-number').value.replace(/\s+/g,'');
+            const exp = document.getElementById('card-exp').value;
+            const cvc = document.getElementById('card-cvc').value;
+            if(!this.validCard(num)){ this.toast('Invalid card number'); return; }
+            if(!/^\d{2}\/\d{2}$/.test(exp)){ this.toast('Invalid expiry'); return; }
+            if(!/^\d{3,4}$/.test(cvc)){ this.toast('Invalid CVC'); return; }
+          }
+          if(this._payMethod==='paypal'){ togglePayPal(true); return; }
+          const form = document.getElementById('checkout-form');
+          form.querySelector('#step-2').classList.add('hidden');
+          form.querySelector('#step-3').classList.remove('hidden');
+          this._checkoutStep=3;
+        }
+        this.updateSummary();
+      },
+      checkoutPrev(){
+        const form = document.getElementById('checkout-form');
+        if(this._checkoutStep===3){
+          form.querySelector('#step-3').classList.add('hidden');
+          form.querySelector('#step-2').classList.remove('hidden');
+          this._checkoutStep=2;
+        } else if(this._checkoutStep===2){
+          form.querySelector('#step-2').classList.add('hidden');
+          form.querySelector('#step-1').classList.remove('hidden');
+          this._checkoutStep=1;
+        }
+        this.updateSummary();
+      },
+      validCard(num){
+        if(!/^\d{13,19}$/.test(num)) return false;
+        // Luhn
+        let sum=0, alt=false;
+        for(let i=num.length-1;i>=0;i--){
+          let n=parseInt(num[i],10);
+          if(alt){ n*=2; if(n>9) n-=9; }
+          sum+=n; alt=!alt;
+        }
+        return sum%10===0;
+      },
+      placeOrder(){
+        const form = document.getElementById('checkout-form');
+        const shipping = Object.fromEntries(new FormData(form).entries());
+        const items = this.cart.map(ci=>{
+          const p = this.getProduct(ci.productId);
+          return { id:ci.productId, qty:ci.qty, plan:ci.plan||null, name:p.name, price:this.itemUnitPrice(p, ci) };
+        });
+        const summaryEls = {
+          subtotal: document.getElementById('sum-sub').textContent,
+          shipping: document.getElementById('sum-ship').textContent,
+          tax: document.getElementById('sum-tax').textContent,
+          total: document.getElementById('sum-total').textContent
+        };
+        const order = {
+          id: 'TIT-'+ Date.now().toString(36).toUpperCase(),
+          createdAt: new Date().toISOString(),
+          items,
+          shipping,
+          payment: this._payMethod,
+          totals: summaryEls,
+          coupon: this._coupon
+        };
+        this.orders.unshift(order); this.saveOrders();
+        this.cart = []; this.saveCart();
+        location.hash = '#/order/'+order.id;
+      },
+      renderConfirmation(id){
+        const o = this.orders.find(x=>x.id===id);
+        if(!o){ this.render404(); return; }
+        document.title = `Order ${o.id} | Titronics`;
+        const html = `
+          <section class="section container order">
+            <h2>Thank you! Your order is confirmed.</h2>
+            <p class="mini">Order <strong>${o.id}</strong> • ${new Date(o.createdAt).toLocaleString()}</p>
+            <div class="panel">
+              <h3>Summary</h3>
+              <div class="divider"></div>
+              ${o.items.map(it=>`<div class="line"><span>${it.name}${it.plan?` (${it.plan})`:''} × ${it.qty}</span><span>${this.currency(it.price*it.qty)}</span></div>`).join('')}
+              <div class="line"><span>Subtotal</span><span>${o.totals.subtotal}</span></div>
+              <div class="line"><span>Shipping</span><span>${o.totals.shipping}</span></div>
+              <div class="line"><span>Tax</span><span>${o.totals.tax}</span></div>
+              <div class="total line"><span>Total</span><span>${o.totals.total}</span></div>
+            </div>
+            <div class="panel" style="margin-top:1rem">
+              <h3>Shipping</h3>
+              <p>${o.shipping.name}<br>${o.shipping.address}<br>${o.shipping.city}, ${o.shipping.state} ${o.shipping.zip}</p>
+              <p>Email: ${o.shipping.email}${o.shipping.phone?` • Phone: ${o.shipping.phone}`:''}</p>
+            </div>
+            <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem">
+              <button class="btn btn-primary" onclick="window.print()">Print Receipt</button>
+              <a class="btn btn-outline" href="mailto:${o.shipping.email}?subject=Order%20${o.id}%20Confirmation&body=${encodeURIComponent('Thank you for your order '+o.shipping.name+'.\n\nOrder: '+o.id+'\nTotal: '+o.totals.total+'\n\n— Titronics')}" target="_blank" rel="noopener">Email Confirmation</a>
+              <a class="btn btn-outline" href="#/products">Continue Shopping</a>
+            </div>
+          </section>
+        `;
+        document.getElementById('view').innerHTML = html;
+      },
+      renderStatic(title, content){
+        document.title = `${title} | Titronics`;
+        const html = `
+          <section class="section container">
+            <h2>${title}</h2>
+            <div class="panel"><p>${content}</p></div>
+          </section>`;
+        document.getElementById('view').innerHTML = html;
+      },
+      render404(){
+        document.title = "Not Found | Titronics";
+        document.getElementById('view').innerHTML = `
+          <section class="section container">
+            <h2>Page not found</h2>
+            <p>Return to <a href="#/">home</a>.</p>
+          </section>
+        `;
+      },
+      injectProductJsonLd(p){
+        const el = document.getElementById('product-json');
+        if(el) el.remove();
+        const data = {
+          "@context":"https://schema.org",
+          "@type":"Product",
+          "name":p.name,
+          "image":p.images,
+          "description":p.short,
+          "sku":p.sku,
+          "brand":{"@type":"Brand","name":"Titronics"},
+          "offers":{
+            "@type":"Offer",
+            "priceCurrency":"USD",
+            "price": (p.salePrice||p.price||p.priceMonthly||0),
+            "availability":"https://schema.org/InStock",
+            "url":"https://www.titronics.com/#/product/"+p.slug
+          },
+          "aggregateRating":{
+            "@type":"AggregateRating",
+            "ratingValue":p.rating,
+            "reviewCount":p.reviewsCount
+          }
+        };
+        const s = document.createElement('script');
+        s.type="application/ld+json"; s.id="product-json"; s.textContent = JSON.stringify(data);
+        document.head.appendChild(s);
+      },
+      // Admin
+      renderAdmin(){
+        document.title = "Admin | Titronics";
+        const html = `
+          <section class="section container">
+            <h2>Admin Dashboard</h2>
+            <div class="admin-grid">
+              <div class="admin-sidebar panel">
+                <div style="display:grid;gap:.4rem">
+                  <button class="btn btn-outline" onclick="App.adminTab('products')">Products</button>
+                  <button class="btn btn-outline" onclick="App.adminTab('import')">Import Excel</button>
+                  <button class="btn btn-outline" onclick="App.adminTab('promos')">Promotions</button>
+                  <button class="btn btn-outline" onclick="App.adminTab('settings')">Settings</button>
+                  <button class="btn btn-outline" onclick="App.adminTab('guide')">How‑to Guide</button>
+                </div>
+              </div>
+              <div class="panel" id="admin-content">
+                ${this.adminProducts()}
+              </div>
+            </div>
+          </section>
+        `;
+        document.getElementById('view').innerHTML = html;
+      },
+      adminTab(tab){
+        const c = document.getElementById('admin-content');
+        if(!c) return;
+        if(tab==='products') c.innerHTML = this.adminProducts();
+        if(tab==='import') c.innerHTML = this.adminImport();
+        if(tab==='promos') c.innerHTML = this.adminPromos();
+        if(tab==='settings') c.innerHTML = this.adminSettings();
+        if(tab==='guide') c.innerHTML = this.adminGuide();
+      },
+      adminProducts(){
+        return `
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <strong>Products</strong>
+            <button class="btn btn-primary" onclick="App.adminEditProduct()">Add Product</button>
+          </div>
+          <div class="divider"></div>
+          <table class="table" style="width:100%">
+            <thead><tr><th>Name</th><th>SKU</th><th>Category</th><th>Price</th><th></th></tr></thead>
+            <tbody>
+              ${this.data.products.map(p=>`
+                <tr>
+                  <td>${p.name}</td>
+                  <td>${p.sku||''}</td>
+                  <td>${p.category}</td>
+                  <td>${p.type==='subscription'? this.currency(p.priceMonthly)+'/mo' : this.currency(p.salePrice||p.price)}</td>
+                  <td style="text-align:right">
+                    <button class="btn btn-ghost" onclick="App.adminEditProduct('${p.id}')">Edit</button>
+                    <button class="btn btn-ghost" onclick="App.adminDeleteProduct('${p.id}')">Delete</button>
+                  </td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        `;
+      },
+      adminEditProduct(id){
+        const p = id? JSON.parse(JSON.stringify(this.getProduct(id))) : { id:'', sku:'', name:'', slug:'', category:'', type:'hardware', price:0, salePrice:null, short:'', description:'', images:[], specs:[], resources:[] };
+        const content = document.getElementById('admin-content');
+        content.innerHTML = `
+          <strong>${id?'Edit':'New'} Product</strong>
+          <div class="divider"></div>
+          <form id="prod-form" class="form">
+            <div class="grid grid-2">
+              <div class="field"><label>Name</label><input name="name" value="${p.name||''}" required /></div>
+              <div class="field"><label>SKU</label><input name="sku" value="${p.sku||''}" /></div>
+            </div>
+            <div class="grid grid-3">
+              <div class="field"><label>Category</label>
+                <select name="category">
+                  ${['Thermography','sEMG','Posture','Accessories','Software','Services','Bundles'].map(c=>`<option ${p.category===c?'selected':''}>${c}</option>`).join('')}
+                </select>
+              </div>
+              <div class="field"><label>Type</label>
+                <select id="p-type" name="type" onchange="App.adminTypeToggle()">
+                  ${['hardware','subscription','service','accessory','bundle','software'].map(t=>`<option ${p.type===t?'selected':''}>${t}</option>`).join('')}
+                </select>
+              </div>
+              <div class="field"><label>Badge</label><input name="badge" value="${p.badge||''}" /></div>
+            </div>
+            <div id="price-block">
+              <div class="grid grid-3">
+                <div class="field"><label>Price</label><input name="price" type="number" value="${p.price||0}" step="0.01" /></div>
+                <div class="field"><label>Sale Price</label><input name="salePrice" type="number" value="${p.salePrice||''}" step="0.01" /></div>
+                <div class="field"><label>Rating</label><input name="rating" type="number" value="${p.rating||5}" step="0.1" /></div>
+              </div>
+            </div>
+            <div id="sub-block" class="${p.type==='subscription'?'':'hidden'}">
+              <div class="grid grid-2">
+                <div class="field"><label>Price Monthly</label><input name="priceMonthly" type="number" value="${p.priceMonthly||0}" step="0.01" /></div>
+                <div class="field"><label>Price Annual</label><input name="priceAnnual" type="number" value="${p.priceAnnual||0}" step="0.01" /></div>
+              </div>
+            </div>
+            <div class="field"><label>Short Description</label><input name="short" value="${p.short||''}" /></div>
+            <div class="field"><label>Long Description</label><textarea name="description" rows="4">${p.description||''}</textarea></div>
+            <div class="field"><label>Images (comma URLs)</label><textarea name="images" rows="2">${(p.images||[]).join(', ')}</textarea></div>
+            <div class="field"><label>Specs (label:value per line)</label><textarea name="specs" rows="3">${(p.specs||[]).map(s=>`${s.label}:${s.value}`).join('\n')}</textarea></div>
+            <div class="field"><label>Resources (label|url per line)</label><textarea name="resources" rows="2">${(p.resources||[]).map(r=>`${r.label}|${r.url}`).join('\n')}</textarea></div>
+            <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+              <button class="btn btn-primary" type="button" onclick="App.adminSaveProduct('${id||''}')">${id?'Save':'Create'}</button>
+              <button class="btn btn-outline" type="button" onclick="App.renderAdmin()">Back</button>
+            </div>
+          </form>
+        `;
+        this.adminTypeToggle(); // adjust blocks
+      },
+      adminTypeToggle(){
+        const type = document.getElementById('p-type')?.value || 'hardware';
+        document.getElementById('sub-block')?.classList.toggle('hidden', type!=='subscription');
+        document.getElementById('price-block')?.classList.toggle('hidden', type==='subscription');
+      },
+      adminSaveProduct(id){
+        const f = document.getElementById('prod-form');
+        const vals = Object.fromEntries(new FormData(f).entries());
+        const images = (vals.images||'').split(',').map(s=>s.trim()).filter(Boolean);
+        const specs = (vals.specs||'').split('\n').map(l=>l.trim()).filter(Boolean).map(l=>{ const [label,...rest]=l.split(':'); return {label, value:rest.join(':').trim()}; });
+        const resources = (vals.resources||'').split('\n').map(l=>l.trim()).filter(Boolean).map(l=>{ const [label,...rest]=l.split('|'); return {label, url:rest.join('|').trim()}; });
+        const p = {
+          id: id || 'p-'+this.slugify(vals.name)+'-'+Math.random().toString(36).slice(2,6),
+          sku: vals.sku, name: vals.name, slug:this.slugify(vals.name),
+          category: vals.category, type: vals.type,
+          price: parseFloat(vals.price||0)||0,
+          salePrice: vals.salePrice? (parseFloat(vals.salePrice)||0) : null,
+          priceMonthly: vals.priceMonthly? parseFloat(vals.priceMonthly)||0 : undefined,
+          priceAnnual: vals.priceAnnual? parseFloat(vals.priceAnnual)||0 : undefined,
+          rating: parseFloat(vals.rating||5)||5, short: vals.short, description: vals.description,
+          badge: vals.badge || null, images, specs, resources
+        };
+        if(id){
+          const idx = this.data.products.findIndex(x=>x.id===id);
+          if(idx>=0) this.data.products[idx] = p;
+        } else {
+          this.data.products.unshift(p);
+        }
+        this.save();
+        this.renderAdmin();
+        this.toast('Product saved');
+      },
+      adminDeleteProduct(id){
+        if(!confirm('Delete this product?')) return;
+        this.data.products = this.data.products.filter(p=>p.id!==id);
+        this.save();
+        this.renderAdmin();
+      },
+      adminImport(){
+        return `
+          <strong>Import from Excel (.xlsx)</strong>
+          <div class="divider"></div>
+          <p>Upload Titronics Master v02.xlsx to import products. Expected headers:</p>
+          <div class="code">Name, SKU, Category, Type, Price, SalePrice, ShortDescription, LongDescription, Images, Specs, Resources, PriceMonthly, PriceAnnual</div>
+          <ul class="mini">
+            <li>• Images: comma separated URLs</li>
+            <li>• Specs: "Label:Value" per line OR semicolon separated values</li>
+            <li>• Resources: "Label|URL" per line OR comma separated pairs</li>
+          </ul>
+          <div class="divider"></div>
+          <input type="file" id="xlsx" accept=".xlsx,.xls" />
+          <div style="margin-top:.6rem">
+            <button class="btn btn-primary" onclick="App.handleExcel()">Import</button>
+            <button class="btn btn-outline" onclick="App.downloadJSON()">Export JSON</button>
+          </div>
+          <div id="import-result" style="margin-top:1rem"></div>
+        `;
+      },
+      handleExcel(){
+        const input = document.getElementById('xlsx');
+        const out = document.getElementById('import-result');
+        if(!input.files?.length){ this.toast('Select a file first'); return; }
+        const file = input.files[0];
+        const reader = new FileReader();
+        reader.onload = (e)=>{
+          const data = new Uint8Array(e.target.result);
+          const wb = XLSX.read(data,{type:'array'});
+          const ws = wb.Sheets[wb.SheetNames[0]];
+          const rows = XLSX.utils.sheet_to_json(ws,{raw:true});
+          const mapped = [];
+          rows.forEach(r=>{
+            const name = r.Name || r.name || '';
+            if(!name) return;
+            const category = r.Category || 'Accessories';
+            const type = (r.Type || 'hardware').toString().toLowerCase();
+            const price = parseFloat(r.Price||0)||0;
+            const sale = r.SalePrice? (parseFloat(r.SalePrice)||0): null;
+            const img = (r.Images||'').toString().split(/[,\n]/).map(s=>s.trim()).filter(Boolean);
+            const specs = [];
+            const specsRaw = r.Specs || r.Specifications || '';
+            if(specsRaw){
+              const lines = specsRaw.toString().split(/[\n;]+/).map(s=>s.trim()).filter(Boolean);
+              lines.forEach(l=>{
+                const [label,...rest] = l.split(':');
+                specs.push({label:label.trim(), value:rest.join(':').trim()});
+              });
+            }
+            const resources = [];
+            const resRaw = r.Resources || '';
+            if(resRaw){
+              const lines = resRaw.toString().split(/[\n,]+/).map(s=>s.trim()).filter(Boolean);
+              lines.forEach(l=>{
+                const [label,...rest] = l.split('|');
+                if(label && rest.length){ resources.push({label:label.trim(), url:rest.join('|').trim()}); }
+              });
+            }
+            const p = {
+              id:'p-'+this.slugify(name)+'-'+Math.random().toString(36).slice(2,6),
+              sku: r.SKU || r.Sku || '',
+              name, slug:this.slugify(name),
+              category, type,
+              price,
+              salePrice: sale,
+              priceMonthly: r.PriceMonthly? parseFloat(r.PriceMonthly)||0 : undefined,
+              priceAnnual: r.PriceAnnual? parseFloat(r.PriceAnnual)||0 : undefined,
+              rating: 4.8,
+              short: r.ShortDescription || '',
+              description: r.LongDescription || '',
+              images: img,
+              specs, resources
+            };
+            mapped.push(p);
+          });
+          if(mapped.length){
+            // Keep existing, prepend imported
+            this.data.products = [...mapped, ...this.data.products];
+            this.save();
+            out.innerHTML = `<div class="panel"><strong>Imported ${mapped.length} products.</strong></div>`;
+            this.toast('Import complete');
+          } else {
+            out.innerHTML = `<div class="panel"><strong>No rows found.</strong></div>`;
+          }
+        };
+        reader.readAsArrayBuffer(file);
+      },
+      downloadJSON(){
+        const blob = new Blob([JSON.stringify(this.data,null,2)],{type:'application/json'});
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'titronics-data.json';
+        a.click();
+        URL.revokeObjectURL(a.href);
+      },
+      adminPromos(){
+        return `
+          <strong>Promotions</strong>
+          <div class="divider"></div>
+          <div class="field"><label>Banner Text</label><input id="promo-text" value="${this.data.promotions.bannerText||''}" /></div>
+          <div style="display:flex;gap:.6rem;margin-top:.6rem">
+            <button class="btn btn-primary" onclick="App.savePromos()">Save</button>
+          </div>
+          <div class="divider"></div>
+          <strong>Coupons</strong>
+          <table class="table" style="width:100%">
+            <thead><tr><th>Code</th><th>Type</th><th>Value</th><th>Active</th><th></th></tr></thead>
+            <tbody id="coupon-rows">
+              ${(this.data.promotions.coupons||[]).map((c,i)=>`
+                <tr>
+                  <td>${c.code}</td>
+                  <td>${c.type}</td>
+                  <td>${c.type==='percent'?c.value+'%':this.currency(c.value)}</td>
+                  <td>${c.active?'Yes':'No'}</td>
+                  <td style="text-align:right"><button class="btn btn-ghost" onclick="App.toggleCoupon(${i})">Toggle</button></td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+          <div class="panel" style="margin-top:.8rem">
+            <h4>Add Coupon</h4>
+            <div class="grid grid-4" style="grid-template-columns:1fr 1fr 1fr 1fr">
+              <div class="field"><label>Code</label><input id="c-code" placeholder="WELCOME10" /></div>
+              <div class="field"><label>Type</label><select id="c-type"><option value="percent">percent</option><option value="amount">amount</option></select></div>
+              <div class="field"><label>Value</label><input id="c-val" type="number" step="0.01" /></div>
+              <div class="field"><label>&nbsp;</label><button class="btn btn-outline" onclick="App.addCoupon()">Add</button></div>
+            </div>
+          </div>
+        `;
+      },
+      savePromos(){
+        const text = document.getElementById('promo-text').value;
+        this.data.promotions.bannerText = text;
+        this.save(); this.toast('Promotions saved');
+      },
+      toggleCoupon(i){
+        const c = this.data.promotions.coupons[i]; if(!c) return;
+        c.active = !c.active; this.save(); this.renderAdmin();
+      },
+      addCoupon(){
+        const code = document.getElementById('c-code').value.trim().toUpperCase();
+        const type = document.getElementById('c-type').value;
+        const val = parseFloat(document.getElementById('c-val').value||0)||0;
+        if(!code || val<=0) return this.toast('Enter code and value');
+        this.data.promotions.coupons = this.data.promotions.coupons||[];
+        this.data.promotions.coupons.push({code, type, value:val, active:true});
+        this.save(); this.renderAdmin(); this.toast('Coupon added');
+      },
+      adminSettings(){
+        const s = this.data.settings;
+        return `
+          <strong>Settings</strong>
+          <div class="divider"></div>
+          <div class="field"><label>Default Tax</label><input id="s-tax" type="number" step="0.0001" value="${s.defaultTax}" /></div>
+          <div class="grid grid-3">
+            <div class="field"><label>Free Shipping Threshold</label><input id="s-free" type="number" value="${s.shippingRules.freeThreshold}" /></div>
+            <div class="field"><label>Ground Shipping</label><input id="s-ground" type="number" value="${s.shippingRules.ground}" /></div>
+            <div class="field"><label>Expedited Shipping</label><input id="s-exp" type="number" value="${s.shippingRules.expedited}" /></div>
+          </div>
+          <div style="display:flex;gap:.6rem;margin-top:.6rem">
+            <button class="btn btn-primary" onclick="App.saveSettings()">Save</button>
+          </div>
+          <div class="divider"></div>
+          <div class="mini">Tax by state (JSON):</div>
+          <textarea id="s-taxmap" rows="4" class="code" style="width:100%">${JSON.stringify(s.taxByState,null,2)}</textarea>
+        `;
+      },
+      saveSettings(){
+        const s = this.data.settings;
+        s.defaultTax = parseFloat(document.getElementById('s-tax').value)||s.defaultTax;
+        s.shippingRules.freeThreshold = parseFloat(document.getElementById('s-free').value)||s.shippingRules.freeThreshold;
+        s.shippingRules.ground = parseFloat(document.getElementById('s-ground').value)||s.shippingRules.ground;
+        s.shippingRules.expedited = parseFloat(document.getElementById('s-exp').value)||s.shippingRules.expedited;
+        try{ s.taxByState = JSON.parse(document.getElementById('s-taxmap').value); } catch(e){}
+        this.save(); this.toast('Settings saved');
+      },
+      adminGuide(){
+        return `
+          <strong>How‑to Guide</strong>
+          <div class="divider"></div>
+          <ol style="line-height:1.9">
+            <li>To edit products: Admin → Products → Edit</li>
+            <li>To bulk import: Admin → Import Excel → Upload “Titronics Master v02.xlsx”</li>
+            <li>To add promotions: Admin → Promotions → Add coupon</li>
+            <li>To update shipping/tax: Admin → Settings</li>
+            <li>Changes are saved in your browser for demo. In production, connect to your CMS (Shopify/WooCommerce).</li>
+          </ol>
+        `;
+      },
+      submitMigration(form){
+        const data = Object.fromEntries(new FormData(form).entries());
+        this.toast('Migration request received. We will contact you shortly.');
+        toggleChat(true);
+        presetChat(`Migration request from ${data.clinic} (${data.email}) on ${data.date||'TBD'}. Notes: ${data.notes||'-'}`);
+        form.reset();
+      },
+      toast(msg){
+        const t = document.getElementById('toast');
+        t.textContent = msg;
+        t.style.display='block';
+        setTimeout(()=>{ t.style.display='none'; }, 2000);
+      },
+      seedChat(){
+        const body = document.getElementById('chat-body');
+        body.innerHTML='';
+        const seed = JSON.parse(localStorage.getItem(ChatKey)||'[]');
+        seed.forEach(m=>this.renderMsg(m));
+        if(seed.length===0){
+          this.renderMsg({from:'bot', text:'Hi! How can we help today?'});
+        }
+      },
+      renderMsg(m){
+        const body = document.getElementById('chat-body');
+        const d = document.createElement('div'); d.className='msg '+(m.from==='user'?'user':'bot');
+        d.innerHTML = `<div class="bubble">${m.text}</div>`;
+        body.appendChild(d);
+        body.scrollTop = body.scrollHeight;
+      },
+      persistChat(from, text){
+        const arr = JSON.parse(localStorage.getItem(ChatKey)||'[]');
+        arr.push({from,text,ts:Date.now()});
+        localStorage.setItem(ChatKey, JSON.stringify(arr));
+      }
+    };
+
+    function toggleMobileMenu(){
+      const nav = document.querySelector('nav.primary');
+      if(getComputedStyle(nav).display==='none'){
+        nav.style.display='flex';
+        nav.style.flexDirection='column';
+        nav.style.position='absolute';
+        nav.style.top='66px';
+        nav.style.left='0';
+        nav.style.right='0';
+        nav.style.background='#fff';
+        nav.style.padding='10px 20px';
+        nav.style.boxShadow='var(--shadow-lg)';
+        nav.style.zIndex='45';
+      } else {
+        nav.removeAttribute('style');
+      }
+    }
+    function toggleChat(open){
+      const c = document.getElementById('chat');
+      c.style.display = open?'flex':'none';
+    }
+    function sendChat(){
+      const input = document.getElementById('chat-input');
+      const text = input.value.trim();
+      if(!text) return;
+      App.renderMsg({from:'user', text});
+      App.persistChat('user', text);
+      input.value='';
+      setTimeout(()=>{
+        const reply = autoReply(text);
+        App.renderMsg({from:'bot', text: reply});
+        App.persistChat('bot', reply);
+      }, 500);
+      function autoReply(t){
+        t=t.toLowerCase();
+        if(t.includes('migrate')||t.includes('migration')) return 'We can help migrate your local software to Titronics Cloud in 2–5 business days. Share your preferred date and we’ll schedule.';
+        if(t.includes('price')||t.includes('cost')) return 'You can view pricing on the Cloud page or product pages. We also offer bundles and promotions.';
+        if(t.includes('support')||t.includes('help')) return 'Our support is available M–F 9–6 ET via chat, email, and phone.';
+        return 'Thanks for reaching out! A specialist will follow up shortly.';
+      }
+    }
+    function presetChat(msg){
+      App.renderMsg({from:'user', text: msg});
+      App.persistChat('user', msg);
+    }
+    function openLightbox(src){
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').style.display='flex';
+    }
+    function closeLightbox(){ document.getElementById('lightbox').style.display='none'; }
+    function togglePayPal(open){ document.getElementById('paypal-modal').style.display = open?'flex':'none'; }
+    function simulatePayPalSuccess(){
+      togglePayPal(false);
+      const form = document.getElementById('checkout-form');
+      form.querySelector('#step-2').classList.add('hidden');
+      form.querySelector('#step-3').classList.remove('hidden');
+      App._checkoutStep=3;
+      App.toast('PayPal authorized. Review and place order.');
+    }
+
+    window.App = App;
+
+    window.addEventListener('change',(e)=>{
+      if(['select','input','textarea'].includes(e.target.tagName.toLowerCase())){
+        if(['state','shipping'].includes(e.target.name)){ App.updateSummary(); }
+      }
+    });
+
+    window.addEventListener('load', App.init.bind(App));
+  </script>
+</body>
+</html>
